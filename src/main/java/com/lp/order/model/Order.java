@@ -1,5 +1,6 @@
  package com.lp.order.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -27,7 +28,7 @@ public class Order {
 	@Column(name="order_status")
 	private String orderStatus;
 	@Column(name="status_date")
-	private Date statusDate;
+	private LocalDate statusDate;
 	@Column(name="allocation_id")
 	private int allocationId;
 	@Column(name="schedule_id")
