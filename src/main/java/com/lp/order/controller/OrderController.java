@@ -25,25 +25,27 @@ public class OrderController {
 	public OrderController(OrderProducer orderProducer) {
 		super();
 		this.orderProducer = orderProducer;
-		System.out.println("Test10");
+		//System.out.println("Test10");
 	}
 
 
 	// save new orders
 	@RequestMapping(value="/orders",method =RequestMethod.POST)
 	public Order save(@RequestBody Order order) {
+		Order order_response= new Order();
+		order_response =orderService.save(order);
 		
 		OrderEvent orderEvent = new OrderEvent();
 		orderEvent.setMessage("Order Placed");
 		orderEvent.setStatus("sucess");
-		orderEvent.setOrder(order);
+		orderEvent.setOrder(order_response);
 		orderProducer.sendMessage(orderEvent);
 				
-		return orderService.save(order);
+		return order_response;
 		
 	}
 	
-	// check order Status 
+	
 	
 
 }

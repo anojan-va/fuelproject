@@ -1,4 +1,6 @@
-package com.lp.order.model;
+ package com.lp.order.model;
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,6 +26,16 @@ public class Order {
 	private int quantity;
 	@Column(name="order_status")
 	private String orderStatus;
-		
+	@Column(name="status_date")
+	private Date statusDate;
+	@Column(name="allocation_id")
+	private int allocationId;
+	@Column(name="schedule_id")
+	private int scheduleId;
+	@Column(name="dispatch_id")
+	private int dispatchId;
+	@Column(name="delivery_id")
+	private int deliveryId;
+	
 
 }
