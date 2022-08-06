@@ -19,16 +19,28 @@ spring:
     consumer:
       bootstrap-servers: localhost:9092
       group-id: allocationresponse
+      group-schdule-id: schduleresponse
+      group-dispatch-id: dispatchresponse
+      group-delivery-id: deliveryresponse
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      #value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      
     properties:
       spring:
         json:
           trusted:
             packages: "*"
-    
+        deserializer: 
+          value: 
+            delegate:
+              class: org.springframework.kafka.support.serializer.JsonDeserializer
+                
     topic:
       name: order-topic
       name-allocation: allocation-topic
+      name-schdule: schedule-topics
+      name-dispatch: dispatch-topic
+      name-delivery: delivery-topic
   

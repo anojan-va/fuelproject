@@ -8,5 +8,45 @@
     "name": "spring.kafka.topic.name-allocation",
     "type": "java.lang.String",
     "description": "A description for 'spring.kafka.topic.name-allocation'"
+  },
+  {
+    "name": "spring.kafka.topic.name-producer",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.kafka.topic.name-producer'"
+  },
+  {
+    "name": "spring.kafka.topic.name-schdule",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.kafka.topic.name-schdule'"
+  },
+  {
+    "name": "spring.kafka.consumer.group-schdule-id",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.kafka.consumer.group-schdule-id'"
+  },
+  {
+    "name": "spring.kafka.topic.name-dispatch",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.kafka.topic.name-dispatch'"
+  },
+  {
+    "name": "spring.kafka.consumer.group-dispatch-id",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.kafka.consumer.group-dispatch-id'"
+  },
+  {
+    "name": "spring.kafka.topic.name-producer-delivery",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.kafka.topic.name-producer-delivery'"
+  },
+  {
+    "name": "spring.kafka.topic.name-delivery",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.kafka.topic.name-delivery'"
+  },
+  {
+    "name": "spring.kafka.consumer.group-delivery-id",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.kafka.consumer.group-delivery-id'"
   }
 ]}
