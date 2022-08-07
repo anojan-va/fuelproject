@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lp.order.kafka.OrderProducer;
@@ -54,6 +55,14 @@ public class OrderController {
 	public List<Order> getOrderList(){
 		
 		return orderService.getOrderList();
+	}
+	
+	// find order by id 
+	@RequestMapping(value="/order",method = RequestMethod.GET)
+	public Order getOrderById(@RequestParam int orderId) {
+		
+		return orderService.getOrderById(orderId);
+		
 	}
 	
 	
