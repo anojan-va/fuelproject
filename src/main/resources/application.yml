@@ -40,7 +40,7 @@ spring:
     topic:
       name: order-topic
       name-allocation: allocation-topic
-      name-schdule: schedule-topics
+      name-schdule: schedule-topic
       name-dispatch: dispatch-topic
       name-delivery: delivery-topic
   

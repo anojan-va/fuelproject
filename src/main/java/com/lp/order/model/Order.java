@@ -26,9 +26,9 @@ public class Order {
 	@Column(name="qty")
 	private int quantity;
 	@Column(name="order_status")
-	private String orderStatus;
+	private String orderStatus="Ordered";
 	@Column(name="status_date")
-	private LocalDate statusDate;
+	private LocalDate statusDate=LocalDate.now();
 	@Column(name="allocation_id")
 	private int allocationId;
 	@Column(name="schedule_id")
